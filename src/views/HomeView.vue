@@ -3,63 +3,68 @@
     <article class="bike-card">
       <!-- Image Section -->
       <div class="bike-image-wrapper">
-        <div class="badge">New 2025</div>
+        <div class="badge">E-Bike</div>
         <img
           class="bike-image"
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop"
-          alt="Trek Domane SL 7 road bike"
+          src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=900&auto=format&fit=crop"
+          alt="Kona Dew-E electric hybrid bike"
           loading="eager"
         />
+        <div class="image-overlay">
+          <span class="overlay-label">Starting from</span>
+          <span class="overlay-price">$3,199</span>
+        </div>
       </div>
 
       <!-- Info Section -->
       <div class="bike-info">
         <header class="bike-header">
-          <p class="bike-brand">Trek</p>
-          <h1 class="bike-name">Domane SL 7</h1>
-          <div class="bike-rating" aria-label="Rating: 4.8 out of 5">
-            <span class="stars" aria-hidden="true">★★★★★</span>
-            <span class="rating-value">4.8</span>
-            <span class="rating-count">(142 reviews)</span>
-          </div>
+          <p class="bike-brand">Kona</p>
+          <h1 class="bike-name">Dew-E</h1>
+          <p class="bike-tagline">City riding, electrically amplified.</p>
         </header>
-
-        <div class="bike-price-block">
-          <span class="price-label">Retail price</span>
-          <div class="price-row">
-            <span class="price">$5,499</span>
-            <span class="price-original">$6,199</span>
-            <span class="price-badge">Save 11%</span>
-          </div>
-        </div>
 
         <div class="bike-specs">
           <div class="spec-item">
+            <span class="spec-icon">⚡</span>
+            <div>
+              <span class="spec-label">Motor</span>
+              <span class="spec-value">Shimano EP6, 250W</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <span class="spec-icon">🔋</span>
+            <div>
+              <span class="spec-label">Battery</span>
+              <span class="spec-value">504 Wh · ~100 km range</span>
+            </div>
+          </div>
+          <div class="spec-item">
             <span class="spec-icon">⚙️</span>
             <div>
-              <span class="spec-label">Groupset</span>
-              <span class="spec-value">Shimano Ultegra Di2</span>
+              <span class="spec-label">Drivetrain</span>
+              <span class="spec-value">Shimano Deore, 10-speed</span>
             </div>
           </div>
           <div class="spec-item">
-            <span class="spec-icon">🪶</span>
+            <span class="spec-icon">🛑</span>
             <div>
-              <span class="spec-label">Weight</span>
-              <span class="spec-value">7.9 kg (56 cm)</span>
-            </div>
-          </div>
-          <div class="spec-item">
-            <span class="spec-icon">🛞</span>
-            <div>
-              <span class="spec-label">Wheels</span>
-              <span class="spec-value">Bontrager Aeolus Pro 3V</span>
+              <span class="spec-label">Brakes</span>
+              <span class="spec-value">Hydraulic disc</span>
             </div>
           </div>
           <div class="spec-item">
             <span class="spec-icon">🏗️</span>
             <div>
               <span class="spec-label">Frame</span>
-              <span class="spec-value">OCLV 500 Carbon</span>
+              <span class="spec-value">6061 Aluminium</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <span class="spec-icon">📱</span>
+            <div>
+              <span class="spec-label">Display</span>
+              <span class="spec-value">Shimano SC-E7000</span>
             </div>
           </div>
         </div>
@@ -67,28 +72,40 @@
         <div class="bike-description">
           <h2>About this bike</h2>
           <p>
-            The Domane SL 7 is the ultimate endurance road bike — engineered to eat up miles on
-            rough roads without sacrificing speed. IsoSpeed front and rear decouplers absorb
-            road buzz so you arrive fresh, whether it's a centuries-long gran fondo or a
-            multi-day tour.
+            The Kona Dew-E takes everything you love about urban cycling and adds intelligent
+            electric assist. Shimano's EP6 mid-drive motor delivers smooth, natural power exactly
+            when you need it — conquering hills with ease and extending every commute into
+            something you actually look forward to.
           </p>
           <p>
-            Electronic shifting via Shimano Ultegra Di2 delivers precise, effortless gear
-            changes at the push of a button. Paired with Bontrager's Aeolus Pro 3V carbon
-            wheels, this bike is fast, comfortable, and ready for any road you point it at.
+            A 504 Wh battery offers real-world range up to 100 km on a single charge, while
+            the Shimano SC-E7000 display keeps you informed at a glance. Hydraulic disc brakes
+            and a durable 6061 alloy frame make it equally at home in daily commutes and weekend
+            adventures.
           </p>
         </div>
 
         <div class="bike-tags">
-          <span class="tag">Endurance</span>
-          <span class="tag">Carbon</span>
-          <span class="tag">Electronic Shifting</span>
-          <span class="tag">Road</span>
+          <span class="tag">Electric</span>
+          <span class="tag">Urban</span>
+          <span class="tag">Commuter</span>
+          <span class="tag">Hybrid</span>
+          <span class="tag">All-Road</span>
         </div>
 
-        <div class="bike-actions">
-          <button class="btn-primary">Add to Cart</button>
-          <button class="btn-secondary" aria-label="Save to wishlist">♡ Save</button>
+        <div class="bike-footer">
+          <div class="footnote">
+            <span class="footnote-dot" aria-hidden="true"></span>
+            Presented for informational purposes only
+          </div>
+          <a
+            class="learn-more"
+            href="https://www.konaworld.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Kona official site ↗
+          </a>
         </div>
       </div>
     </article>
@@ -113,7 +130,6 @@
 .bike-card {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0;
   width: 100%;
   max-width: 1100px;
   background: var(--color-background-soft);
@@ -134,8 +150,8 @@
 /* ── Image ─────────────────────────────────────────── */
 .bike-image-wrapper {
   position: relative;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  min-height: 320px;
+  background: linear-gradient(160deg, #0d1f2d 0%, #1a3a4a 60%, #0f2b1f 100%);
+  min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -147,26 +163,54 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
 .bike-image-wrapper:hover .bike-image {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .badge {
   position: absolute;
   top: 1.25rem;
   left: 1.25rem;
-  z-index: 1;
+  z-index: 2;
   background: hsla(160, 100%, 37%, 1);
   color: #fff;
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 2rem 1.5rem 1.25rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.overlay-label {
+  font-size: 0.7rem;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.3rem 0.75rem;
-  border-radius: 100px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.overlay-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
 }
 
 /* ── Info ──────────────────────────────────────────── */
@@ -181,106 +225,37 @@
 .bike-header {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.2rem;
 }
 
 .bike-brand {
   font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: hsla(160, 100%, 37%, 1);
 }
 
 .bike-name {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--color-heading);
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
-.bike-rating {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-top: 0.25rem;
-}
-
-.stars {
-  color: #f59e0b;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
-}
-
-.rating-value {
-  font-weight: 600;
-  font-size: 0.875rem;
-  color: var(--color-heading);
-}
-
-.rating-count {
-  font-size: 0.8rem;
+.bike-tagline {
+  font-size: 0.92rem;
   color: var(--color-text);
   opacity: 0.6;
-}
-
-/* Price */
-.bike-price-block {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.price-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  opacity: 0.55;
-  color: var(--color-text);
-}
-
-.price-row {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.price {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--color-heading);
-  line-height: 1;
-}
-
-.price-original {
-  font-size: 1rem;
-  opacity: 0.45;
-  text-decoration: line-through;
-  color: var(--color-text);
-}
-
-.price-badge {
-  background: #fef3c7;
-  color: #92400e;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 100px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .price-badge {
-    background: rgba(245, 158, 11, 0.2);
-    color: #fbbf24;
-  }
+  margin-top: 0.1rem;
+  font-style: italic;
 }
 
 /* Specs */
 .bike-specs {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .spec-item {
@@ -294,10 +269,10 @@
 }
 
 .spec-icon {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1;
   flex-shrink: 0;
-  margin-top: 1px;
+  margin-top: 2px;
 }
 
 .spec-item > div {
@@ -308,7 +283,7 @@
 }
 
 .spec-label {
-  font-size: 0.68rem;
+  font-size: 0.67rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   opacity: 0.5;
@@ -316,7 +291,7 @@
 }
 
 .spec-value {
-  font-size: 0.8rem;
+  font-size: 0.79rem;
   font-weight: 600;
   color: var(--color-heading);
   white-space: nowrap;
@@ -332,88 +307,74 @@
 }
 
 .bike-description h2 {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  opacity: 0.5;
+  opacity: 0.45;
   color: var(--color-text);
 }
 
 .bike-description p {
-  font-size: 0.88rem;
-  line-height: 1.7;
+  font-size: 0.875rem;
+  line-height: 1.75;
   color: var(--color-text);
-  opacity: 0.85;
+  opacity: 0.82;
 }
 
 /* Tags */
 .bike-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
 .tag {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 500;
   border: 1px solid var(--color-border-hover);
   color: var(--color-text);
-  padding: 0.25rem 0.75rem;
+  padding: 0.22rem 0.7rem;
   border-radius: 100px;
-  transition: background 0.2s;
 }
 
-.tag:hover {
-  background: var(--color-background-mute);
-}
-
-/* Actions */
-.bike-actions {
+/* Footer */
+.bike-footer {
   display: flex;
-  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   margin-top: auto;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--color-border);
 }
 
-.btn-primary {
-  flex: 1;
-  padding: 0.85rem 1.5rem;
-  background: hsla(160, 100%, 37%, 1);
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    background 0.2s,
-    transform 0.1s;
-}
-
-.btn-primary:hover {
-  background: hsla(160, 100%, 30%, 1);
-}
-
-.btn-primary:active {
-  transform: scale(0.98);
-}
-
-.btn-secondary {
-  padding: 0.85rem 1.25rem;
-  background: transparent;
-  border: 1px solid var(--color-border-hover);
-  border-radius: 10px;
-  font-size: 0.95rem;
-  font-weight: 500;
+.footnote {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
   color: var(--color-text);
-  cursor: pointer;
-  transition:
-    background 0.2s,
-    border-color 0.2s;
-  white-space: nowrap;
+  opacity: 0.45;
 }
 
-.btn-secondary:hover {
-  background: var(--color-background-mute);
-  border-color: var(--color-border-hover);
+.footnote-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: hsla(160, 100%, 37%, 0.7);
+  flex-shrink: 0;
+}
+
+.learn-more {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: hsla(160, 100%, 37%, 1);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.learn-more:hover {
+  opacity: 0.75;
 }
 </style>

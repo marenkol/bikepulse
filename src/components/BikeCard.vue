@@ -5,65 +5,46 @@
       <div class="badge">E-Bike</div>
       <img
         class="bike-image"
-        src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=900&auto=format&fit=crop"
+        :src="bikeImage"
         alt="Kona Dew-E electric hybrid bike"
         loading="eager"
       />
       <div class="image-overlay">
-        <span class="overlay-label">Starting from</span>
-        <span class="overlay-price">$3,199</span>
+        <span class="overlay-label">Best price in Finland</span>
+        <span class="overlay-price">{{ formatPrice(minPrice) }}</span>
+        <span class="overlay-updated">Checked {{ formatDateTime(priceUpdatedAt) }}</span>
       </div>
     </div>
 
     <!-- Info Section -->
     <div class="bike-info">
       <header class="bike-header">
-        <p class="bike-brand">Kona</p>
-        <h1 class="bike-name">Dew-E</h1>
-        <p class="bike-tagline">City riding, electrically amplified.</p>
+        <h1 class="bike-name">Kona Dew-E</h1>
       </header>
 
       <div class="bike-specs">
         <div class="spec-item">
-          <span class="spec-icon">⚡</span>
           <div>
             <span class="spec-label">Motor</span>
             <span class="spec-value">Shimano EP6, 250W</span>
           </div>
         </div>
         <div class="spec-item">
-          <span class="spec-icon">🔋</span>
           <div>
             <span class="spec-label">Battery</span>
             <span class="spec-value">504 Wh · ~100 km range</span>
           </div>
         </div>
         <div class="spec-item">
-          <span class="spec-icon">⚙️</span>
           <div>
             <span class="spec-label">Drivetrain</span>
             <span class="spec-value">Shimano Deore, 10-speed</span>
           </div>
         </div>
         <div class="spec-item">
-          <span class="spec-icon">🛑</span>
           <div>
             <span class="spec-label">Brakes</span>
             <span class="spec-value">Hydraulic disc</span>
-          </div>
-        </div>
-        <div class="spec-item">
-          <span class="spec-icon">🏗️</span>
-          <div>
-            <span class="spec-label">Frame</span>
-            <span class="spec-value">6061 Aluminium</span>
-          </div>
-        </div>
-        <div class="spec-item">
-          <span class="spec-icon">📱</span>
-          <div>
-            <span class="spec-label">Display</span>
-            <span class="spec-value">Shimano SC-E7000</span>
           </div>
         </div>
       </div>
@@ -76,27 +57,9 @@
           when you need it — conquering hills with ease and extending every commute into
           something you actually look forward to.
         </p>
-        <p>
-          A 504 Wh battery offers real-world range up to 100 km on a single charge, while
-          the Shimano SC-E7000 display keeps you informed at a glance. Hydraulic disc brakes
-          and a durable 6061 alloy frame make it equally at home in daily commutes and weekend
-          adventures.
-        </p>
-      </div>
-
-      <div class="bike-tags">
-        <span class="tag">Electric</span>
-        <span class="tag">Urban</span>
-        <span class="tag">Commuter</span>
-        <span class="tag">Hybrid</span>
-        <span class="tag">All-Road</span>
       </div>
 
       <div class="bike-footer">
-        <div class="footnote">
-          <span class="footnote-dot" aria-hidden="true"></span>
-          Presented for informational purposes only
-        </div>
         <a
           class="learn-more"
           href="https://www.konaworld.com"
@@ -111,7 +74,26 @@
 </template>
 
 <script setup lang="ts">
-// Static presentation — no reactive state needed
+import bikeImage from '@/assets/images/kona-dew-e-2.webp'
+
+defineProps<{
+  minPrice: number
+  priceUpdatedAt: Date
+}>()
+
+function formatPrice(price: number): string {
+  return new Intl.NumberFormat('fi-FI', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(price)
+}
+
+function formatDateTime(date: Date): string {
+  return new Intl.DateTimeFormat('fi-FI', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+  }).format(date)
+}
 </script>
 
 <style scoped>
@@ -132,7 +114,7 @@
 
 @media (min-width: 768px) {
   .bike-card {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
   }
 }
 
@@ -202,6 +184,12 @@
   line-height: 1;
 }
 
+.overlay-updated {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.2rem;
+}
+
 /* ── Info ──────────────────────────────────────────── */
 .bike-info {
   padding: 2rem 2rem 2.25rem;
@@ -215,14 +203,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-}
-
-.bike-brand {
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: hsla(160, 100%, 37%, 1);
 }
 
 .bike-name {
@@ -255,13 +235,6 @@
   border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 0.65rem 0.75rem;
-}
-
-.spec-icon {
-  font-size: 1.05rem;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: 2px;
 }
 
 .spec-item > div {
@@ -310,22 +283,6 @@
   opacity: 0.82;
 }
 
-/* Tags */
-.bike-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.tag {
-  font-size: 0.72rem;
-  font-weight: 500;
-  border: 1px solid var(--color-border-hover);
-  color: var(--color-text);
-  padding: 0.22rem 0.7rem;
-  border-radius: 100px;
-}
-
 /* Footer */
 .bike-footer {
   display: flex;
@@ -335,23 +292,6 @@
   margin-top: auto;
   padding-top: 0.25rem;
   border-top: 1px solid var(--color-border);
-}
-
-.footnote {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.72rem;
-  color: var(--color-text);
-  opacity: 0.45;
-}
-
-.footnote-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: hsla(160, 100%, 37%, 0.7);
-  flex-shrink: 0;
 }
 
 .learn-more {
